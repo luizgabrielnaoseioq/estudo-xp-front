@@ -4,8 +4,10 @@ import Image from "next/image";
 import { Button } from "@nextui-org/react";
 import { signIn } from "next-auth/react";
 import { Rocket } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-[#0B0B0F] px-6 py-12 text-center text-[#EDEDED] relative overflow-hidden">
       {/* ===== GRADIENT BACKGROUND ===== */}
@@ -59,6 +61,7 @@ export default function Home() {
         <Button
           variant="bordered"
           className="flex w-full rounded-2xl border-2 border-[#8B5CF6]/60 bg-[#12121A]/60 backdrop-blur-xl py-6 text-lg font-extrabold text-[#C4B5FD] shadow-inner shadow-[#1E1E2A]/30 transition-all hover:bg-[#1C1C24]/80 hover:border-[#A78BFA]/70 active:scale-95"
+          onClick={() => router.push("/onboarding")}
         >
           JÁ POSSUI UMA CONTA?
         </Button>
