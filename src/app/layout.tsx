@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { HeroUIProvider } from "@heroui/react";
 
 export const metadata: Metadata = {
   title: "Meu App",
@@ -13,7 +14,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className="bg-gray-50 text-gray-900">{children}</body>
+      <body className="bg-gray-50 text-gray-900">
+        <HeroUIProvider>{children}</HeroUIProvider>
+      </body>
     </html>
   );
 }
