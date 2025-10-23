@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { Button } from "@nextui-org/react";
-import { signIn } from "next-auth/react";
 import { LoaderCircle, Rocket } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -13,7 +12,7 @@ export default function Home() {
   const [showSplash, setShowSplash] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShowSplash(false), 3000);
+    const timer = setTimeout(() => setShowSplash(false), 1000);
     return () => clearTimeout(timer);
   }, []);
 
